@@ -1,0 +1,378 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+
+
+
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<link rel="stylesheet" href="themes/lobo.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).on("pagecreate","#page",function(){
+  $("p").on("swipe",function(){
+    $("span").text("ESTADIO OLIMPICO UNIVERSITARIO");
+  });                       
+});
+</script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>LOBOS</h1>
+	</div>
+
+  <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+			<li><a href="#page2">ESCUDO</a></li>
+            <li><a href="#page3">ESTADIO</a></li>
+			<li><a href="#page4">JUGADORES</a></li>
+            <li><a href="#page5">ESTADÍSTICAS 2014</a></li>
+            <li><a href="#page6">DT</a></li>       
+		</ul>
+  </div>
+   
+	<div data-role="footer" data-position="fixed">
+		<h4>BUAP</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+ 
+ <div id="pageone" data-role="main" class="ui-content">
+    <p>Click en la imagen</p>
+    
+    <a href="#myPopup" data-rel="popup" data-position-to="window">
+    <img src="lobos.png" alt="Skaret View" style="width:200px;"></a>
+    <div data-role="popup" id="myPopup">
+      
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="lobos.png" style="width:800px;height:700px;" alt="Skaret View">
+    </div>   
+ </div>
+</div>  	
+
+<div data-role="page" id="page3">
+
+  <div data-role="main" class="ui-content">
+    <p>Desliza el dedo sobre el rectángulo</p>
+    <p style="border:1px solid black;height:50px;width:560px;"></p>
+    <img src="estadio.jpg" width="560" height="226">
+    <p><span style="color:#FF0"></span></p>    
+  </div>
+  
+ <a href="#myPopupDialog" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Presentación</a>
+
+    <div data-role="popup" id="myPopupDialog">
+      <div data-role="header">
+        <h1>IUTH</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <h2>Maestría en Redes Computacionales</h2>
+        <p>Ivan Manuel Guevara Flores</p>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Regresar</a>
+      </div> 
+     </div> 
+ 
+
+</div>
+
+<div data-role="page" id="page4">
+ <div data-role="main" class="ui-content">
+    <h2>JUGADORES</h2>
+    <form class="ui-filterable">
+      <input id="myFilter" data-type="search">
+    </form>
+    <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+      <li><a href="#">Alberto Lucio</a></li>
+      <li><a href="#">Alberto Quintero</a></li>
+      <li><a href="#">Alejandro Castillo</a></li>
+      <li><a href="#">César Cercado</a></li>
+      <li><a href="#">Cristian Borja</a></li>
+      <li><a href="#">Daniel Cuevas</a></li>
+      <li><a href="#">Diego Jiménez</a></li>
+      <li><a href="#">Eduardo Gámez</a></li>
+      <li><a href="#">Edwin León</a></li>
+      <li><a href="#">Ever Guzmán</a></li>
+      <li><a href="#">Facundo Affranchino</a></li>
+      <li><a href="#">Francisco Canales</a></li>
+      <li><a href="#">Héctor Morales</a></li>
+      <li><a href="#">Javier Toledo</a></li>
+      <li><a href="#">Jorge Ibarra</a></li>
+      <li><a href="#">Juan Mosqueda</a></li>
+      <li><a href="#">Luis Olascoaga</a></li>
+      <li><a href="#">Marco Argüelles</a></li>
+      <li><a href="#">Mario Pérez</a></li>
+      <li><a href="#">Marvin Piñon</a></li>
+      <li><a href="#">Omar Tejeda</a></li>
+      <li><a href="#">Onay Pineda</a></li>
+      <li><a href="#">Orlando Rincón</a></li>
+      <li><a href="#">Othoniel Arce</a></li>
+      <li><a href="#">Pedro García</a></li>
+      <li><a href="#">René Ruvalcaba</a></li>
+      <li><a href="#">Roberto Juárez</a></li>
+      <li><a href="#">Sergio Arias</a></li>
+      <li><a href="#">Yair Urbina</a></li>      
+    </ul>
+ </div>	
+</div>
+
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>CALENDARIO 2014</h1>
+	</div>
+
+<div data-role="content" data-theme="c" >	
+    	<table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Boton" id="TABLAEMPLE">
+        	<thead>
+	        	<tr>
+ 		    	   	<th data-priority="5">FECHA</th>
+    			    <th data-priority="4">LOCAL</th>
+    	    		<th data-priority="3">RESULTADO</th>
+		            <th data-priority="2">VISITANTE</th>
+    	        	<th data-priority="1">COMPETICIÓN</th>
+        		</tr>
+         	</thead>
+         	<tbody>
+				<tr>
+					<td>14/01</td>
+	                <td>Lobos BUAP</td>
+    	            <td>0-4</td>
+        	        <td>Veracruz</td>
+            	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>21/01</td>
+	                <td>Veracruz</td>
+		            <td>0-0</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>04/02</td>
+	                <td>Lobos BUAP</td>
+		            <td>1-3</td>
+	    	        <td>Chiapas</td>
+	        	    <td>Copa MX</td>
+				</tr>
+    	    	<tr>
+					<td>18/02</td>
+            	    <td>Chiapas</td>
+	            	<td>0-1</td>
+		            <td>Lobos BUAP</td>
+		            <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>25/02</td>
+	                <td>Lobos BUAP</td>
+		            <td>1-0</td>
+	    	        <td>Oaxaca</td>
+	        	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>11/03</td>
+	                <td>Oaxaca</td>
+		            <td>4-0</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Copa MX</td>
+				</tr>        		
+                <tr>
+					<td>18/07</td>
+	                <td>Lobos BUAP</td>
+		            <td>2-1</td>
+	    	        <td>At. San Luis</td>
+	        	    <td>Ascenso MX</td>
+				</tr>
+        		<tr>
+					<td>26/07</td>
+	                <td>Celaya</td>
+		            <td>0-2</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>29/07</td>
+	                <td>Lobos BUAP</td>
+		            <td>4-2</td>
+	    	        <td>Chiapas</td>
+	        	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>01/08</td>
+	                <td>Lobos BUAP</td>
+		            <td>0-1</td>
+	    	        <td>Mineros de Zacatecas</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>06/08</td>
+	                <td>Chiapas</td>
+		            <td>0-0</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>09/08</td>
+	                <td>Zacatepec</td>
+		            <td>1-2</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>15/08</td>
+	                <td>Lobos BUAP</td>
+		            <td>2-3</td>
+	    	        <td>Correcaminos</td>
+	        	    <td>Ascenso MX</td>
+				</tr>
+        		<tr>
+					<td>20/08</td>
+	                <td>Veracruz</td>
+		            <td>0-0</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Copa MX</td>
+				</tr>        		
+                <tr>
+					<td>23/08</td>
+	                <td>Necaxa</td>
+		            <td>1-0</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>
+        		<tr>
+					<td>26/08</td>
+	                <td>Lobos BUAP</td>
+		            <td>1-1</td>
+	    	        <td>Veracruz</td>
+	        	    <td>Copa MX</td>
+				</tr>        		
+                <tr>
+					<td>29/08</td>
+	                <td>Coras Tepic</td>
+		            <td>0-0</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>
+        		<tr>
+					<td>12/09</td>
+	                <td>Lobos BUAP</td>
+		            <td>3-0</td>
+	    	        <td>Dorados de Sinaloa</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>17/09</td>
+	                <td>Oaxaca</td>
+		            <td>1-1</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>20/09</td>
+	                <td>Altamira</td>
+		            <td>0-2</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>23/09</td>
+	                <td>Lobos BUAP</td>
+		            <td>3-2</td>
+	    	        <td>Oaxaca</td>
+	        	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>26/09</td>
+	                <td>Lobos BUAP</td>
+		            <td>1-2</td>
+	    	        <td>Oaxaca</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>04/10</td>
+	                <td>Irapuato</td>
+		            <td>2-2</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>
+        		<tr>
+					<td>17/10</td>
+	                <td>Lobos BUAP</td>
+		            <td>3-1</td>
+	    	        <td>Mérida</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>21/10</td>
+	                <td>Mérida</td>
+		            <td>1-3</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Copa MX</td>
+				</tr>
+        		<tr>
+					<td>24/10</td>
+	                <td>Atlante</td>
+		            <td>1-0</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>28/10</td>
+	                <td>Puebla</td>
+		            <td>1-1</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>
+        		<tr>
+					<td>01/11</td>
+	                <td>Lobos BUAP</td>
+		            <td>0-0</td>
+	    	        <td>Mineros de Zacatecas</td>
+	        	    <td>Ascenso MX</td>
+				</tr>        		
+                <tr>
+					<td>07/11</td>
+	                <td>Mineros de Zacatecas</td>
+		            <td>1-1</td>
+	    	        <td>Lobos BUAP</td>
+	        	    <td>Ascenso MX</td>
+				</tr>             
+			</tbody>                     
+	    </table>                                 
+	</div>    
+
+</div>
+
+<div data-role="page" id="page6">
+<div data-role="panel" id="myPanel"> 
+  <img src="dt.jpg" width="300" height="500"> 
+  <p> RICARDO VALIÑO </p>
+</div> 
+
+  <div data-role="header">
+    <h1>Director Técnico</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Click para mostrar el panel</p>
+    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Abrir Panel</a>
+    
+    <a href="#page6" data-rel="close" class="ui-btn">
+    Cerrar Panel</a>
+    
+  </div>
+	
+</div>
+
+</body>
+</html>
