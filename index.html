@@ -29,7 +29,7 @@ $(document).on("pagecreate","#page",function(){
 
 <div data-role="page" id="page">
 	<div data-role="header">
-		<h1>LOBOS</h1>
+		<h1>LOBOS BUAP</h1>
 	</div>
 
   <div data-role="content">
@@ -40,14 +40,19 @@ $(document).on("pagecreate","#page",function(){
             <li><a href="#page5">ESTADÍSTICAS 2014</a></li>
             <li><a href="#page6">DT</a></li>       
 		</ul>
-  </div>
-   
-	<div data-role="footer" data-position="fixed">
-		<h4>BUAP</h4>
-	</div>
+  </div>   
 </div>
 
 <div data-role="page" id="page2">
+
+    <div data-role="header">
+		<h1>ESCUDO</h1>
+        
+        <a data-direction="reverse" data-rel="back"> 
+        Atras
+        </a>
+        
+	</div>
  
  <div id="pageone" data-role="main" class="ui-content">
     <p>Click en la imagen</p>
@@ -59,9 +64,29 @@ $(document).on("pagecreate","#page",function(){
       <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="lobos.png" style="width:800px;height:700px;" alt="Skaret View">
     </div>   
  </div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="right">
+     <ul>
+      <li> <a href="#page3" data-transition="pop" data-icon="star"> Estadio </a> </li>
+      <li> <a href="#page4" data-transition="flip" data-icon="star"> Jugadores </a> </li>
+      <li> <a href="#page5" data-transition="slideup" data-icon="star"> Estadísticas </a> </li>
+      <li> <a href="#page6" data-transition="fade" data-icon="star"> DT </a> </li>
+      <li> <a href="#page" data-transition="slide" data-icon="star"> INICIO </a> </li>
+     </ul>
+  </div>
+ </div>   
 </div>  	
 
 <div data-role="page" id="page3">
+
+    <div data-role="header">
+		<h1>ESTADIO</h1>
+        
+        <a data-direction="reverse" data-rel="back"> 
+        Atras
+        </a>
+        
+	</div>
 
   <div data-role="main" class="ui-content">
     <p>Desliza el dedo sobre el rectángulo</p>
@@ -83,13 +108,31 @@ $(document).on("pagecreate","#page",function(){
         <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Regresar</a>
       </div> 
      </div> 
- 
-
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="right">
+     <ul>
+      <li> <a href="#page2" data-transition="pop" data-icon="star"> Escudo </a> </li>
+      <li> <a href="#page4" data-transition="flip" data-icon="star"> Jugadores </a> </li>
+      <li> <a href="#page5" data-transition="slideup" data-icon="star"> Estadísticas </a> </li>
+      <li> <a href="#page6" data-transition="fade" data-icon="star"> DT </a> </li>
+      <li> <a href="#page" data-transition="slide" data-icon="star"> INICIO </a> </li>
+     </ul>
+  </div>
+ </div>        
 </div>
 
 <div data-role="page" id="page4">
+    <div data-role="header">
+		<h1>JUGADORES</h1>
+        
+        <a data-direction="reverse" data-rel="back"> 
+        Atras
+        </a>
+        
+	</div>
+
  <div data-role="main" class="ui-content">
-    <h2>JUGADORES</h2>
+    
     <form class="ui-filterable">
       <input id="myFilter" data-type="search">
     </form>
@@ -124,12 +167,28 @@ $(document).on("pagecreate","#page",function(){
       <li><a href="#">Sergio Arias</a></li>
       <li><a href="#">Yair Urbina</a></li>      
     </ul>
- </div>	
+ </div>
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="right">
+     <ul>
+      <li> <a href="#page2" data-transition="pop" data-icon="star"> Escudo </a> </li>
+      <li> <a href="#page3" data-transition="flip" data-icon="star"> Estadio </a> </li>
+      <li> <a href="#page5" data-transition="slideup" data-icon="star"> Estadísticas </a> </li>
+      <li> <a href="#page6" data-transition="fade" data-icon="star"> DT </a> </li>
+      <li> <a href="#page" data-transition="slide" data-icon="star"> INICIO </a> </li>
+     </ul>
+  </div>
+ </div>   
 </div>
 
 <div data-role="page" id="page5">
-	<div data-role="header">
+    <div data-role="header">
 		<h1>CALENDARIO 2014</h1>
+        
+        <a data-direction="reverse" data-rel="back"> 
+        Atras
+        </a>
+        
 	</div>
 
 <div data-role="content" data-theme="c" >	
@@ -350,18 +409,33 @@ $(document).on("pagecreate","#page",function(){
 			</tbody>                     
 	    </table>                                 
 	</div>    
-
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="right">
+     <ul>
+      <li> <a href="#page2" data-transition="pop" data-icon="star"> Escudo </a> </li>
+      <li> <a href="#page3" data-transition="flip" data-icon="star"> Estadio </a> </li>
+      <li> <a href="#page4" data-transition="slideup" data-icon="star"> Jugadores </a> </li>
+      <li> <a href="#page6" data-transition="fade" data-icon="star"> DT </a> </li>
+      <li> <a href="#page" data-transition="slide" data-icon="star"> INICIO </a> </li>
+     </ul>
+  </div>
+ </div>   
 </div>
 
 <div data-role="page" id="page6">
 <div data-role="panel" id="myPanel"> 
-  <img src="dt.jpg" width="300" height="500"> 
+  <img src="dt.jpg" width="230" height="430"> 
   <p> RICARDO VALIÑO </p>
 </div> 
-
-  <div data-role="header">
-    <h1>Director Técnico</h1>
-  </div>
+ 
+    <div data-role="header">
+		<h1>Director Técnico</h1>
+        
+        <a data-direction="reverse" data-rel="back"> 
+        Atras
+        </a>
+        
+	</div>  
 
   <div data-role="main" class="ui-content">
     <p>Click para mostrar el panel</p>
@@ -371,7 +445,17 @@ $(document).on("pagecreate","#page",function(){
     Cerrar Panel</a>
     
   </div>
-	
+<div data-role="footer" data-position="fixed">
+  <div data-role="navbar" data-iconpos="right">
+     <ul>
+      <li> <a href="#page2" data-transition="pop" data-icon="star"> Escudo </a> </li>
+      <li> <a href="#page3" data-transition="flip" data-icon="star"> Estadio </a> </li>
+      <li> <a href="#page4" data-transition="slideup" data-icon="star"> Jugadores </a> </li>
+      <li> <a href="#page5" data-transition="fade" data-icon="star"> Estadísticas </a> </li>
+      <li> <a href="#page" data-transition="slide" data-icon="star"> INICIO </a> </li>
+     </ul>
+  </div>
+ </div>   	
 </div>
 
 </body>
