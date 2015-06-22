@@ -1,0 +1,4 @@
+<link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+
+En Estadio
+<p style="border:1px solid black;height:50px;width:530px;"></p>
